@@ -3,20 +3,290 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ארגון הסגל האקדמי - המכללה האקדמית ספיר | פורטל הסכמים ושכר</title>
-  <!-- Tailwind CSS -->
+  <title>ארגון הסגל האקדמי - המכללה האקדמית ספיר | פורטל הסכמים, שכר ומידע</title>
+  
+  <!-- ספריית העיצוב Tailwind CSS (חובה לעיצוב מלא) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Rubik -->
+  
+  <!-- גופן עברי מודרני Rubik -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Lucide Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- ספריית אייקונים Lucide -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
+            sans: ['Rubik', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              950: '#082f49',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+    }
+    .card-shadow {
+      box-shadow: 0 10px 30px -5px rgba(12, 74, 110, 0.08);
+    }
+    .card-shadow:hover {
+      box-shadow: 0 20px 35px -5px rgba(12, 74, 110, 0.14);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- סרגל ניווט ראשי -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- לוגו וכותרת -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-950 via-brand-900 to-brand-700 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+          <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="block text-xl font-black text-brand-950 leading-tight">ארגון הסגל האקדמי</span>
+          <span class="text-xs font-semibold text-brand-600 tracking-wide">המכללה האקדמית ספיר</span>
+        </div>
+      </a>
+
+      <!-- תפריט דסקטופ -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#about" class="hover:text-brand-900 transition">אודות הארגון</a>
+        <a href="#leadership" class="hover:text-brand-900 transition">חברי הוועד</a>
+        <a href="#agreements" class="hover:text-brand-900 transition">הסכמים וחוזים</a>
+        <a href="#salary" class="hover:text-brand-900 transition">טבלאות שכר</a>
+        <a href="#higher-ed" class="hover:text-brand-900 transition">ההשכלה הגבוהה</a>
+        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-brand-900 text-white hover:bg-brand-800 transition shadow-sm font-medium">פנייה לוועד</a>
+      </nav>
+
+      <!-- כפתור מובייל -->
+      <button class="md:hidden p-2 text-slate-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+
+    <!-- תפריט מובייל נפתח -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 font-semibold text-slate-700 text-sm">
+      <a href="#about" class="block py-1 hover:text-brand-900">אודות הארגון</a>
+      <a href="#leadership" class="block py-1 hover:text-brand-900">חברי הוועד</a>
+      <a href="#agreements" class="block py-1 hover:text-brand-900">הסכמים וחוזים</a>
+      <a href="#salary" class="block py-1 hover:text-brand-900">טבלאות שכר</a>
+      <a href="#higher-ed" class="block py-1 hover:text-brand-900">ההשכלה הגבוהה</a>
+      <a href="#contact" class="block py-2 text-brand-900 font-bold">פנייה לוועד</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-brand-950 via-brand-900 to-slate-900 text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+    <div class="relative max-w-5xl mx-auto text-center space-y-8">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-800/80 border border-brand-600 text-gold-400 text-xs font-bold shadow-inner">
+        <i data-lucide="shield-check" class="w-4 h-4"></i> ארגון עובדים יציג ומקצועי למען כלל הסגל
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
+        הגנה על זכויות המרצים, <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-amber-200">
+          מצוינות אקדמית וביטחון תעסוקתי
+        </span>
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light">
+        הפורטל הרשמי של ארגון הסגל האקדמי במכללה האקדמית ספיר. כאן מרוכזים כלל ההסכמים הקיבוציים, טבלאות השכר המעודכנות לסגל הבכיר והנלווה, ועדכונים שוטפים על מעמד המכללות בישראל.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-4">
+        <a href="#salary" class="px-7 py-3.5 bg-gold-500 hover:bg-gold-600 text-slate-950 font-bold rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+          טבלאות שכר מעודכנות
+        </a>
+        <a href="#agreements" class="px-7 py-3.5 bg-brand-800/80 hover:bg-brand-700 border border-brand-500 text-white font-medium rounded-xl transition">
+          עיון במאגר ההסכמים
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- אודות הארגון -->
+  <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+      <div class="lg:col-span-2 space-y-5">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-700">מי אנחנו</h2>
+        <h3 class="text-3xl font-extrabold text-slate-900 leading-snug">
+          פועלים משנת 2007 למען שימור תנאי העסקה הוגנים והעצמת המחקר וההוראה
+        </h3>
+        <p class="text-slate-600 leading-relaxed">
+          ארגון הסגל האקדמי במכללה האקדמית ספיר הנו ארגון עובדים המאגד בתוכו מרצים במינוי, עמיתי הוראה, מרצים מן החוץ ומתרגלים. הארגון החל לפעול ביולי 2007 כאשר התקיימה האסיפה הראשונה בה אושר התקנון ונערכו בחירות ראשונות לוועד.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          הארגון מוכרז כארגון עובדים יציג ורוב המרצים במכללה חברים בו. חברי הוועד פועלים על בסיס התנדבותי ומייצגים את הסגל גם בארגוני המרצים הארציים מול ור"מ (ועד ראשי המכללות), ות"ת ומשרד האוצר.
+        </p>
+      </div>
+      <div class="bg-gradient-to-br from-brand-900 to-brand-950 text-white p-8 rounded-3xl shadow-xl space-y-6">
+        <h4 class="text-xl font-bold border-b border-brand-800 pb-3 flex items-center gap-2">
+          <i data-lucide="check-circle-2" class="text-gold-400"></i> עקרונות היסוד
+        </h4>
+        <ul class="space-y-4 text-sm text-slate-300">
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-gold-400 mt-2 shrink-0"></span>
+            <span>הבטחת ביטחון תעסוקתי ותנאי שכר הוגנים לכלל מסלולי ההעסקה.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-gold-400 mt-2 shrink-0"></span>
+            <span>קידום תקציבי מחקר, קרנות קשרי מדע ומענקי הצטיינות.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-gold-400 mt-2 shrink-0"></span>
+            <span>ייצוג משפטי ומקצועי מול הנהלת המכללה והרשויות הציבוריות.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- חברי הוועד (כולל תמונות/כרטיסים) -->
+  <section id="leadership" class="py-20 bg-slate-100/70 border-y border-slate-200 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-brand-700 mb-2">נציגות הסגל</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">חברי ועד ארגון הסגל האקדמי</h3>
+        <p class="text-slate-600 mt-2">המרצות והמרצים המובילים את פעילות הארגון בהתנדבות ומייצגים את קהילת ספיר</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- ד"ר מולי בנטמן -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow transition-all text-center flex flex-col items-center">
+          <div class="w-28 h-28 rounded-full border-4 border-brand-100 shadow-md mb-4 overflow-hidden bg-slate-200">
+            <!-- אם יש קובץ תמונה מקומי במאגר, אפשר להחליף את ה-src לשם הקובץ (למשל: src="mouli.jpg") -->
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300" alt="ד&quot;ר מולי בנטמן" class="w-full h-full object-cover">
+          </div>
+          <span class="text-xs font-bold text-gold-600 bg-amber-50 px-3 py-1 rounded-full mb-2">יושב ראש הוועד</span>
+          <h4 class="text-xl font-bold text-slate-900">ד"ר מולי בנטמן</h4>
+          <p class="text-xs text-slate-500 mb-4 font-medium">המחלקה למנהל ומדיניות ציבורית</p>
+          <a href="mailto:mbentman@gmail.com" class="mt-auto inline-flex items-center gap-2 text-sm text-brand-700 font-semibold hover:text-brand-900 bg-brand-50 px-4 py-2 rounded-xl w-full justify-center">
+            <i data-lucide="mail" class="w-4 h-4"></i> mbentman@gmail.com
+          </a>
+        </div>
+
+        <!-- ד"ר רעות ריינה בנדריהם -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow transition-all text-center flex flex-col items-center">
+          <div class="w-28 h-28 rounded-full border-4 border-brand-100 shadow-md mb-4 overflow-hidden bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300" alt="ד&quot;ר רעות ריינה בנדריהם" class="w-full h-full object-cover">
+          </div>
+          <span class="text-xs font-bold text-brand-700 bg-brand-50 px-3 py-1 rounded-full mb-2">סגנית יו"ר הוועד</span>
+          <h4 class="text-xl font-bold text-slate-900">ד"ר רעות ריינה בנדריהם</h4>
+          <p class="text-xs text-slate-500 mb-4 font-medium">חברת סגל אקדמי</p>
+          <a href="mailto:bd.reut@gmail.com" class="mt-auto inline-flex items-center gap-2 text-sm text-brand-700 font-semibold hover:text-brand-900 bg-brand-50 px-4 py-2 rounded-xl w-full justify-center">
+            <i data-lucide="mail" class="w-4 h-4"></i> bd.reut@gmail.com
+          </a>
+        </div>
+
+        <!-- ד"ר עמיחי גורביץ -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow transition-all text-center flex flex-col items-center">
+          <div class="w-28 h-28 rounded-full border-4 border-brand-100 shadow-md mb-4 overflow-hidden bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300" alt="ד&quot;ר עמיחי גורביץ" class="w-full h-full object-cover">
+          </div>
+          <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full mb-2">גזבר הארגון</span>
+          <h4 class="text-xl font-bold text-slate-900">ד"ר עמיחי גורביץ</h4>
+          <p class="text-xs text-slate-500 mb-4 font-medium">חבר סגל אקדמי</p>
+          <a href="mailto:amihai.menuhin@gmail.com" class="mt-auto inline-flex items-center gap-2 text-sm text-brand-700 font-semibold hover:text-brand-900 bg-brand-50 px-4 py-2 rounded-xl w-full justify-center">
+            <i data-lucide="mail" class="w-4 h-4"></i> amihai.menuhin@gmail.com
+          </a>
+        </div>
+
+        <!-- ד"ר עמוס ישראל-פליסהואור -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow transition-all text-center flex flex-col items-center">
+          <div class="w-28 h-28 rounded-full border-4 border-slate-200 shadow-md mb-4 overflow-hidden bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300" alt="ד&quot;ר עמוס ישראל-פליסהואור" class="w-full h-full object-cover">
+          </div>
+          <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full mb-2">חבר ועד</span>
+          <h4 class="text-xl font-bold text-slate-900">ד"ר עמוס ישראל-פליסהואור</h4>
+          <p class="text-xs text-slate-500 mb-4 font-medium">בית הספר למשפטים</p>
+          <a href="mailto:aisrael@mail.sapir.ac.il" class="mt-auto inline-flex items-center gap-2 text-sm text-brand-700 font-semibold hover:text-brand-900 bg-brand-50 px-4 py-2 rounded-xl w-full justify-center">
+            <i data-lucide="mail" class="w-4 h-4"></i> aisrael@mail.sapir.ac.il
+          </a>
+        </div>
+
+        <!-- ד"ר יעלה לבנת רענן -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow transition-all text-center flex flex-col items-center">
+          <div class="w-28 h-28 rounded-full border-4 border-slate-200 shadow-md mb-4 overflow-hidden bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=300" alt="ד&quot;ר יעלה לבנת רענן" class="w-full h-full object-cover">
+          </div>
+          <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full mb-2">חברת ועד</span>
+          <h4 class="text-xl font-bold text-slate-900">ד"ר יעלה לבנת רענן</h4>
+          <p class="text-xs text-slate-500 mb-4 font-medium">המחלקה למנהל ומדיניות ציבורית</p>
+          <a href="mailto:Yallylivnat@gmail.com" class="mt-auto inline-flex items-center gap-2 text-sm text-brand-700 font-semibold hover:text-brand-900 bg-brand-50 px-4 py-2 rounded-xl w-full justify-center">
+            <i data-lucide="mail" class="w-4 h-4"></i> Yallylivnat@gmail.com
+          </a>
+        </div>
+
+        <!-- טוני שירה כהן -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow transition-all text-center flex flex-col items-center">
+          <div class="w-28 h-28 rounded-full border-4 border-purple-200 shadow-md mb-4 overflow-hidden bg-purple-50 flex items-center justify-center">
+            <i data-lucide="user-check" class="w-12 h-12 text-purple-600"></i>
+          </div>
+          <span class="text-xs font-bold text-purple-700 bg-purple-50 px-3 py-1 rounded-full mb-2">רכזת הארגון</span>
+          <h4 class="text-xl font-bold text-slate-900">טוני שירה כהן</h4>
+          <p class="text-xs text-slate-500 mb-4 font-medium">ניהול משרד, פניות סגל ורווחה</p>
+          <a href="mailto:acvaad@gmail.com" class="mt-auto inline-flex items-center gap-2 text-sm text-brand-700 font-semibold hover:text-brand-900 bg-brand-50 px-4 py-2 rounded-xl w-full justify-center">
+            <i data-lucide="mail" class="w-4 h-4"></i> acvaad@gmail.com
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- מאגר הסכמים קיבוציים ומסמכים -->
+  <section id="agreements" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs uppercase font-bold tracking-widest text-brand-700 mb-2">מאגר דיגיטלי</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">הסכמים קיבוציים ונוהלי עבודה</h3>
+      <p class="text-slate-600 mt-2">מסמכי הבסיס המעגנים את הזכויות, השכר והביטחון התעסוקתי של מרצי המכללה</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- הסכם 1: סגל בכיר -->
+      <div class="bg-white p-7 rounded-3xl border border-slate-200 card-shadow flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-lg bg-red-50 text-red-600 font-black text-xs uppercase flex items-center gap-1.5">
+              <i data-lucide="file-text" class="w-4 h-4"></i> PDF
+            </span>
+            <span class="text-xs text-slate-400 font-medium">הסכם ארצי</span>
+          </div>
+          <h4 class="font-bold text-lg text-slate-900 mb-2">הסכם קיבוצי - סגל בכיר במכללות הציבוריות</h4>
+          <p class="text-xs text-slate-500 leading-relaxed mb-6">
+            ההסכם הקיבוצי המסדיר את תנאי השכר, מסלולי הקידום האקדמי (מרצה עד פרופ' מן המניין), שעות ההוראה, קרנות מחקר וקשרי מדע, וזכויות יציאה לשבתון.
+          </p>
+        </div>
+        <!-- אם קיים קובץ מקומי, מחליפים את ה-href לשם הקובץ (למשל: href="senior-agreement.pdf") -->
+        <a href="https://www.sapir.ac.il/services_shell/sapirsegel" target="_blank" class="w-full py-3 px-4 bg-brand-950 hover:bg-brand-800 text-white font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition shadow-sm">
             sans: ['Rubik', 'sans-serif'],
           },
           colors: {
