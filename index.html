@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ארגון הסגל האקדמי - המכללה האקדמית ספיר | פורטל הסכמים ושכר</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Rubik -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Rubik', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              950: '#082f49',
+            },
+            accent: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  <!-- ניווט עליון -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-900 to-brand-700 flex items-center justify-center text-white shadow-md">
+          <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+        </div>
+        <div>
+          <span class="block text-xl font-bold text-brand-950 leading-tight">ארגון הסגל האקדמי</span>
+          <span class="text-xs font-semibold tracking-wider text-brand-700">המכללה האקדמית ספיר</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700">
+        <a href="#about" class="hover:text-brand-700 transition-colors">אודות</a>
+        <a href="#leadership" class="hover:text-brand-700 transition-colors">חברי הוועד</a>
+        <a href="#agreements" class="hover:text-brand-700 transition-colors">מאגר הסכמים</a>
+        <a href="#salary" class="hover:text-brand-700 transition-colors">טבלאות שכר</a>
+        <a href="#higher-ed" class="hover:text-brand-700 transition-colors">מצב ההשכלה הגבוהה</a>
+        <a href="#contact" class="px-4 py-2 bg-brand-900 text-white rounded-lg hover:bg-brand-800 transition shadow-sm">צור קשר</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-brand-950 via-brand-900 to-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto text-center space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-800/80 border border-brand-700 text-accent-400 text-xs font-semibold">
+        <i data-lucide="shield-check" class="w-4 h-4"></i> ארגון עובדים יציג ומקצועי למען כלל הסגל
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+        הגנה על זכויות, מצוינות בהוראה ובמחקר, <br class="hidden sm:inline">וביטחון תעסוקתי בספיר
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+        הארגון מאגד את חברי הסגל האקדמי הבכיר במינוי, הסגל הנלווה והמורים מן החוץ במכללה האקדמית ספיר. כאן תמצאו את נוסחי ההסכמים הקיבוציים, טבלאות השכר המעודכנות וניתוח מעמד המכללות הציבוריות.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-4">
+        <a href="#salary" class="px-6 py-3 bg-accent-500 hover:bg-accent-600 text-slate-950 font-bold rounded-xl shadow-lg transition">טבלאות שכר מעודכנות</a>
+        <a href="#agreements" class="px-6 py-3 bg-brand-800/80 hover:bg-brand-700 border border-brand-600 text-white font-medium rounded-xl transition">עיון בהסכמים קיבוציים</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- חברי הוועד -->
+  <section id="leadership" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs uppercase font-bold tracking-widest text-brand-700 mb-2">נבחרת הסגל</h2>
+      <h3 class="text-3xl font-extrabold text-slate-900">חברי ועד ארגון הסגל</h3>
+      <p class="text-slate-600 mt-2">המרצים והפעילים המייצגים את ציבור הסגל האקדמי בהתנדבות ומתוך מחויבות עמוקה</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- ד"ר מולי בנטמן -->
+      <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition text-center flex flex-col items-center">
+        <div class="w-24 h-24 rounded-full bg-slate-200 border-2 border-brand-500 mb-4 overflow-hidden flex items-center justify-center text-slate-500 text-2xl font-bold">
+          <i data-lucide="user" class="w-12 h-12 text-brand-800"></i>
+        </div>
+        <span class="text-xs font-bold text-accent-600 bg-accent-50 px-2.5 py-0.5 rounded-full mb-1">יושב ראש הוועד</span>
+        <h4 class="text-xl font-bold text-slate-900">ד"ר מולי בנטמן</h4>
+        <p class="text-xs text-slate-500 mb-4">המחלקה למנהל ומדיניות ציבורית</p>
+        <a href="mailto:mbentman@gmail.com" class="mt-auto inline-flex items-center gap-2 text-sm text-brand-700 font-semibold hover:text-brand-900">
+          <i data-lucide="mail" class="w-4 h-4"></i> mbentman@gmail.com
+        </a>
+      </div>
+
+      <!-- ד"ר רעות ריינה בנדריהם -->
+      <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition text-center flex flex-col items-center">
+        <div class="w-24 h-24 rounded-full bg-slate-200 border-2 border-brand-500 mb-4 overflow-hidden flex items-center justify-center text-slate-5
